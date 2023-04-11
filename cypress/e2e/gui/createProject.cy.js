@@ -1,6 +1,12 @@
 import { faker } from '@faker-js/faker'
 
-describe('CreateProject', () => {
+const options = {
+  env: {
+    snapshotOnly: true,
+  }
+}
+
+describe('CreateProject', options, () => {
   beforeEach(() => {
     cy.login()
     cy.visit('/')
